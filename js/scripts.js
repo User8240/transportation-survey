@@ -10,13 +10,15 @@ $(document).ready(function() {
     $("#work-responses").show();
     $("input:checkbox[name=work-transportation]:checked").each(function() {
       const workTransportationMode = $(this).val();
-      $('#work-responses').append(workTransportationMode + "<br>");
+      const capitalWorkTransportationMode = workTransportationMode.toUpperCase();
+      $('#work-responses').append(capitalWorkTransportationMode + "<br>");
     });
     $("#fun-responses").show();
     $("input:checkbox[name=fun-transportation]:checked").each(function(){
       const funTransportationMode = $(this).val();
-      $('#fun-responses').append(funTransportationMode + "<br>");
-    });
+      const capitalFunTransportationMode = funTransportationMode.toUpperCase();
+      $('#fun-responses').append(capitalFunTransportationMode + "<br>");
+    }); 
     $('#transportation_survey').hide();
   });
 });
